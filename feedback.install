@@ -1,0 +1,19 @@
+<?php
+
+function feedback_schema() {
+  $schema['feedback'] = array(
+    'description' => 'Stores name and feeback selected',
+      'fields' => array(
+        'name' => array(
+          'description' => 'The name entered by user',
+          'type' => 'varchar',
+        ), 
+        'rating' => array(
+          'type' => 'boolean',
+          'description' => 'The feedback selected from the form',
+          'not null' => TRUE,
+        ),
+      ),    
+  );
+  return $schema;
+}
